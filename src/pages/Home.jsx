@@ -2,6 +2,7 @@ import React from 'react';
 import { Categories, PizzaBlock, SortPopup } from '../components';
 
 function Home({ items }) {
+	
 	return (
 		<div className="container">
 			<div className="content__top">
@@ -17,10 +18,9 @@ function Home({ items }) {
 				{items.map((obj) => (
 					<PizzaBlock key={obj.id} {...obj} />
 					))}
-				
 			</div>
 		</div>	
 	);
 }
 
-export default Home
+export default Home;

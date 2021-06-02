@@ -77,10 +77,10 @@ PizzaBlock.propTypes = {
 };
 
 PizzaBlock.defaultProps = {
-	name: '---',
+	name: 'Название пиццы',
 	price: 0,
 	types: [],
 	sizes: [],
   };
 
-export default PizzaBlock
+export default PizzaBlock;

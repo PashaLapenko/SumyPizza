@@ -18,7 +18,7 @@ class App extends React.Component {
 			<div className="wrapper">
 				<Header />
 				<div className="content">
-					<Route path="/" render={() => <Home items={[this.props.items]} />} exact /> 	{/* Если в компонент который рендериться нужно
+					<Route path="/" render={() => <Home items={this.props.items} />} exact /> 	{/* Если в компонент который рендериться нужно
 																		 прокинуть ещё компоненты, тогда мы выбираем
 																		такой вариант */}
 					<Route path="/cart" component={Cart} exact />		{/* Если нет, тогда такой вариант */}
@@ -31,6 +31,7 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
 	return {
 		items: state.pizzas.items,
+		filters: state.filters,
 	};
 };
 
